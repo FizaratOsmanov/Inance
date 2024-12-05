@@ -1,7 +1,7 @@
 ﻿@using Inance.Models;
 @model Orders;
 
-<form method="post">
+<form method="post" asp-area="Admin" asp-controller="Order" asp-action="Create">
     <div class="form-group">
         <label asp-for="ClientName"></label>
         <input class="form-control" asp-for="ClientName">

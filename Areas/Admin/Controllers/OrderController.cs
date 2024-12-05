@@ -15,6 +15,13 @@ namespace Inance.Areas.Admin.Controllers
         public IActionResult Index()
         {
             IEnumerable<Orders>? orders = _dbContext.Orders.ToList();
+            return View(orders);
+        }
+
+
+        [HttpGet]
+        public IActionResult Create()
+        {
             return View();
         }
         [HttpPost]
@@ -24,7 +31,7 @@ namespace Inance.Areas.Admin.Controllers
             {
                 return BadRequest("Something went wrong");
             }
-            _dbContext.Orders.Add(order);
+            _dbContext.Orders.Add(order); 
             _dbContext.SaveChanges();
             return RedirectToAction(nameof(Index));
         }

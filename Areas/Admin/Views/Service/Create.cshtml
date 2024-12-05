@@ -1,0 +1,22 @@
+﻿@using Inance.Models;
+@model Services;
+
+<form method="post" asp-area="Admin" asp-controller="Service" asp-action="Create">
+    <div class="form-group">
+        <label asp-for="Title"></label>
+        <input class="form-control" asp-for="Title">
+    </div>
+    <div class="form-group">
+        <label asp-for="Description"></label>
+        <input class="form-control" asp-for="Description">
+    </div>
+        <div class="form-group">
+        <label asp-for="IsActive"></label>
+        <input class="form-control" asp-for="IsActive">
+    </div>
+    <div class="form-group">
+        <label asp-for="Image"></label>
+        <input class="form-control" asp-for="Image">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
