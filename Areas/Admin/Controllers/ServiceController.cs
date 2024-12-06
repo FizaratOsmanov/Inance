@@ -1,6 +1,7 @@
 ﻿using Inance.Areas.Admin.ViewModels;
 
 using Inance.DAL;
+using Inance.DTOs.ServiceDTOs;
 using Inance.Models;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -102,6 +103,14 @@ namespace Inance.Areas.Admin.Controllers
             if (services == null)
             {
                 return RedirectToAction(nameof(Index), nameof(services));
+            }
+
+            UpdateServiceDto updateServiceDto=new UpdateServiceDto()
+            {
+                Title=services.Title,
+                Description=services.Description,
+                MainImageUrl=services.
+                
             }
 
 
